@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Guillermo Ramírez para proyectos de desarrollo web frontend y fullstack.">
+    <title>Contacto | Guillermo Ramírez</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">GR</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+                <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="page-header">
+            <h1 class="page-title">¡Hablemos!</h1>
+            <p class="page-subtitle">
+                ¿Tienes un proyecto en mente? Me encantaría ayudarte a hacerlo realidad
+            </p>
+        </header>
+
+        <div class="contact-content">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Estoy aquí para ayudarte</h3>
+                <p>
+                    Siempre estoy emocionado por nuevos desafíos y oportunidades de colaboración. 
+                    Ya sea que tengas un proyecto específico en mente o simplemente quieras charlar 
+                    sobre desarrollo web, no dudes en contactarme.
+                </p>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <span>
+                                <a href="mailto:ramirezguillermofederico@gmail.com">
+                                    ramirezguillermofederico@gmail.com
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <span>
+                                <a href="https://www.linkedin.com/in/guillermo-federico-ramirez-59064334a" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    Guillermo Federico Ramírez
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <span>
+                                <a href="https://github.com/Federico-008" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                    @Federico-008
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Disponibilidad</h4>
+                            <span>Lun - Vie, 9:00 AM - 6:00 PM (GMT-3)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    ¡Mensaje enviado con éxito! Te responderé pronto.
+                </div>
+
+                <form id="contactForm" action="https://formsubmit.co/ramirezguillermofederico@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-group">
+                        <label for="nombre" class="form-label">Nombre *</label>
+                        <input type="text" 
+                               id="nombre" 
+                               name="nombre" 
+                               class="form-input" 
+                               placeholder="Tu nombre completo"
+                               required>
+                        <div class="form-error">Por favor, ingresa tu nombre</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               class="form-input" 
+                               placeholder="tu@email.com"
+                               required>
+                        <div class="form-error">Por favor, ingresa un email válido</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto" class="form-label">Asunto *</label>
+                        <input type="text" 
+                               id="asunto" 
+                               name="asunto" 
+                               class="form-input" 
+                               placeholder="¿Sobre qué quieres hablar?"
+                               required>
+                        <div class="form-error">Por favor, ingresa el asunto</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje" class="form-label">Mensaje *</label>
+                        <textarea id="mensaje" 
+                                  name="mensaje" 
+                                  class="form-textarea" 
+                                  placeholder="Cuéntame más sobre tu proyecto o idea..."
+                                  required></textarea>
+                        <div class="form-error">Por favor, escribe tu mensaje</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <span class="btn-text">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensaje
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/guillermo-federico-ramirez-59064334a" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="social-link"
+               aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Federico-008" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="social-link"
+               aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:ramirezguillermofederico@gmail.com" 
+               class="social-link"
+               aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p class="footer-text">
+            © 2025 Guillermo Ramírez. Todos los derechos reservados.
+        </p>
+    </footer>
+
+<script src="JavaScript/contacto.js"></script>
+</body>
+</html>
