@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Guillermo Federico Ramírez</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/cv.css">
+</head>
+
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+    <!-- NAVIGATION -->
+    <a href="index.html" class="back-to-portfolio">
+        <i class="fas fa-arrow-left"></i>
+        Volver al Portafolio
+    </a>
+
+    <!-- CV ACTIONS -->
+    <div class="cv-actions">
+        <button onclick="window.print()" class="cv-action-btn" title="Imprimir CV">
+            <i class="fas fa-print"></i>
+        </button>
+        <a href="assets/documents/cv-guillermo-ramirez.pdf" download class="cv-action-btn" title="Descargar PDF">
+            <i class="fas fa-download"></i>
+        </a>
+    </div>
+
+    <div class="cv-container">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <!-- Espacio para la foto de perfil -->
+                <img src="assets/images/cv foto.webp" width="120" height="120" alt="Guillermo Federico Ramírez"
+                    class="profile-image">
+                <h1 class="profile-name">Guillermo Federico Ramírez</h1>
+                <p class="profile-title">Desarrollador Frontend | Técnico en Informática</p>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Posadas, Misiones</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+54-3764888093</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>ramirezguillermofederico@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/guillermo-federico-ramirez</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/Federico-008</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Habilidades Técnicas</h3>
+                <div class="skill-item">
+                    <div class="skill-name">HTML5</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">CSS3</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Microsoft Office</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Soporte Técnico</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Idiomas</h3>
+                <div class="language-item">
+                    <span>Español</span>
+                    <span class="language-level">Nativo</span>
+                </div>
+                <div class="language-item">
+                    <span>Inglés</span>
+                    <span class="language-level">Intermedio</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Habilidades Blandas</h3>
+                <ul class="soft-skills">
+                    <li>Comunicación efectiva</li>
+                    <li>Liderazgo de equipos</li>
+                    <li>Resolución de problemas</li>
+                    <li>Escucha activa y empatía</li>
+                    <li>Gestión del tiempo</li>
+                    <li>Orientación al cliente</li>
+                    <li>Actitud proactiva</li>
+                    <li>Adaptabilidad</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <section class="section">
+                <h2 class="section-title">Perfil Profesional</h2>
+                <p class="profile-summary">
+                    Técnico en informática en transición hacia el desarrollo frontend, con sólida experiencia en
+                    mantenimiento de equipos, liderazgo en puntos de venta y atención al cliente. Profesional
+                    comprometido y proactivo, con gran capacidad de adaptación y pasión por el aprendizaje
+                    constante. Busco aplicar mis habilidades técnicas y de gestión en proyectos de desarrollo
+                    web, combinando mi experiencia en soporte técnico con mis nuevas competencias en
+                    programación frontend.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Experiencia Profesional</h2>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Barman</div>
+                            <div class="company-name">Darshana Bar</div>
+                        </div>
+                        <div class="job-period">Feb 2023 - Feb 2025</div>
+                    </div>
+                    <p class="job-description">
+                        Gestión integral de bar con enfoque en excelencia del servicio y control operativo.
+                    </p>
+                    <ul class="job-achievements">
+                        <li>Organización y optimización del servicio en barra</li>
+                        <li>Control y reposición estratégica de inventario</li>
+                        <li>Gestión de caja con sistema FUDO</li>
+                        <li>Mantenimiento de estándares de higiene y calidad</li>
+                        <li>Atención personalizada al cliente y resolución de consultas</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Encargado del Sector de Pollería/Repositor</div>
+                            <div class="company-name">Autoservicio "Lo de Pubi"</div>
+                        </div>
+                        <div class="job-period">2020 - 2023</div>
+                    </div>
+                    <p class="job-description">
+                        Supervisión de área específica con responsabilidades de gestión de stock y atención al cliente.
+                    </p>
+                    <ul class="job-achievements">
+                        <li>Supervisión de stock y exhibición de productos</li>
+                        <li>Control de vencimientos y rotación de mercadería</li>
+                        <li>Atención directa al cliente y asesoramiento</li>
+                        <li>Coordinación con proveedores y gestión de pedidos</li>
+                        <li>Mantenimiento de estándares de presentación del sector</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Formación Académica</h2>
+
+                <div class="education-item">
+                    <div class="education-title">Operador de Informática para la Administración y Gestión</div>
+                    <div class="education-institution">Centro de Formación Profesional PADRE JUAN MARKIEVICZ SVD</div>
+                    <div class="education-period">2021</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-title">Desarrollo Web FullStack</div>
+                    <div class="education-institution">Udemy - Curso Online</div>
+                    <div class="education-period">2024 - En curso</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Cursos y Certificaciones</h2>
+
+                <div class="courses-grid">
+                    <div class="course-item">
+                        <div class="course-title">Introducción al Desarrollo Web: HTML y CSS</div>
+                        <div class="course-provider">Google Activate</div>
+                        <div class="course-period">Enero - Marzo 2025</div>
+                    </div>
+
+                    <div class="course-item">
+                        <div class="course-title">Marketing Digital</div>
+                        <div class="course-provider">Comunidad Reparando</div>
+                        <div class="course-period">2023</div>
+                    </div>
+
+                    <div class="course-item">
+                        <div class="course-title">Reparación de PC de Cero a Experto</div>
+                        <div class="course-provider">Comunidad Reparando</div>
+                        <div class="course-period">2022 - 2023</div>
+                    </div>
+
+                    <div class="course-item">
+                        <div class="course-title">Data Carving</div>
+                        <div class="course-provider">Comunidad Reparando</div>
+                        <div class="course-period">2022 - 2023</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Competencias Técnicas</h2>
+
+                <div class="tech-skills-grid">
+                    <div class="tech-category">
+                        <div class="tech-category-title">Desarrollo Frontend</div>
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <span class="tech-level">Junior</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                            <span class="tech-level">Junior</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript ES2024</span>
+                            <span class="tech-level">Junior</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <div class="tech-category-title">Sistemas y Software</div>
+                        <div class="tech-item">
+                            <i class="fab fa-microsoft"></i>
+                            <span>Microsoft Office</span>
+                            <span class="tech-level">Avanzado</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-desktop"></i>
+                            <span>Sistemas Operativos</span>
+                            <span class="tech-level">Avanzado</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-cash-register"></i>
+                            <span>Sistema FUDO</span>
+                            <span class="tech-level">Intermedio</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <div class="tech-category-title">Hardware y Soporte</div>
+                        <div class="tech-item">
+                            <i class="fas fa-tools"></i>
+                            <span>Ensamble y Mantenimiento PC</span>
+                            <span class="tech-level">Avanzado</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-laptop"></i>
+                            <span>Reparación de Laptops</span>
+                            <span class="tech-level">Avanzado</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-hdd"></i>
+                            <span>Diagnóstico de Hardware</span>
+                            <span class="tech-level">Avanzado</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="JavaScript/cv-theme.js"></script>
+</body>
+
+</html>
