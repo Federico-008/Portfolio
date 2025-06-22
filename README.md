@@ -64,7 +64,7 @@ Bienvenido a mi portafolio personal. Este sitio fue diseñado y desarrollado par
 
 - **Deploy automático** con GitHub + Netlify
 - Cada `push` a `main` → genera deploy en:  
-  [https://tudominio.com](https://tudominio.com)
+  ([https://tudominio.com](https://guillermodevportfolio.netlify.app/))
 
 ---
 
