@@ -5,9 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Proyectos de Guillermo Ramírez - Desarrollador Frontend especializado en crear experiencias web únicas.">
+        content="Proyectos de Guillermo Ramírez - Desarrollo Web Frontend y Trabajos Técnicos de Reparación y Mantenimiento de Computadoras.">
+    <meta name="keywords"
+        content="proyectos web, portfolio, Guillermo Ramirez, React, JavaScript, reparación PC, mantenimiento hardware, ensamblaje computadoras, Argentina">
+    <meta name="author" content="Guillermo Ramírez">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Proyectos | Guillermo Ramírez - Frontend &amp; Hardware">
+    <meta property="og:description"
+        content="Proyectos de desarrollo web y trabajos técnicos en reparación y mantenimiento de computadoras.">
+    <meta property="og:url" content="https://guillermodevportfolio.netlify.app/proyectos.html">
+
     <title>Proyectos | Guillermo Ramírez</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"> <!-- Base Theme -->
     <link rel="stylesheet" href="css/proyectos.css">
 </head>
 
@@ -21,8 +41,11 @@
                 <li><a href="proyectos.html" class="nav-link active">Proyectos</a></li>
                 <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" style="display:none;">
                 <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
@@ -30,15 +53,21 @@
     <!-- Main Content -->
     <main class="main-content">
         <header class="page-header">
-            <h1 class="page-title">Mis Proyectos</h1>
+            <h1 class="page-title">Mis Proyectos y Servicios</h1>
             <p class="page-subtitle">
-                Una colección de proyectos que demuestran mis habilidades y pasión por el desarrollo web
+                Una colección de proyectos de desarrollo web y mis trabajos como técnico en reparación de PC.
             </p>
         </header>
 
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Desarrollo Web</button>
+            <button class="filter-btn" data-filter="repair">Reparación de PC</button>
+        </div>
+
         <div class="projects-grid">
             <!-- Proyecto 1: Mi Primera Página -->
-            <article class="project-card">
+            <article class="project-card" data-category="web">
                 <div class="project-image">
                     <!-- Espacio para imagen del proyecto -->
                     <img src="assets/images/Primer Página@.jpg" alt="Mi Primera Página Web" loading="lazy">
@@ -87,7 +116,7 @@
             </article>
 
             <!-- Proyecto 2: FrontEnd Store -->
-            <article class="project-card">
+            <article class="project-card" data-category="web">
                 <div class="project-image">
                     <!-- Espacio para imagen del proyecto -->
                     <img src="assets/images/FrontEnd Store@.jpg" alt="FrontEnd Store - Tienda Online" loading="lazy">
@@ -140,7 +169,7 @@
             </article>
 
             <!-- Proyecto 3: El Rincón del Café -->
-            <article class="project-card">
+            <article class="project-card" data-category="web">
                 <div class="project-image">
                     <!-- Espacio para imagen del proyecto -->
                     <img src="assets/images/Rincon del café@.jpg" alt="El Rincón del Café" loading="lazy">
@@ -192,14 +221,14 @@
                 </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="web">
                 <div class="project-image">
                     <!-- Espacio para imagen del proyecto -->
                     <img src="assets/images/festivalmusica.webp" alt="El Rincón del Café" loading="lazy">
                     <div class="project-overlay">
                         <div class="project-links">
-                            <a href="https://rockfestivaledmmusic.netlify.app/" target="_blank" rel="noopener noreferrer"
-                                class="project-link" aria-label="Ver proyecto en vivo">
+                            <a href="https://rockfestivaledmmusic.netlify.app/" target="_blank"
+                                rel="noopener noreferrer" class="project-link" aria-label="Ver proyecto en vivo">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
                             <a href="https://github.com/Federico-008/Festival-Musica" target="_blank"
@@ -250,8 +279,104 @@
                 </div>
             </article>
 
+            <!-- Trabajo Técnico 1 -->
+            <article class="project-card" data-category="repair">
+                <div class="project-image">
+                    <img src="src/img/20241212_144335.webp" alt="Mantenimiento Preventivo" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Mantenimiento Preventivo</h3>
+                    <p class="project-description">
+                        Limpieza profunda de componentes, cambio de pasta térmica y optimización del flujo de aire para
+                        mejorar el rendimiento y evitar sobrecalentamientos.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">
+                            <i class="fas fa-tools" style="color: #64748b;"></i> Hardware
+                        </span>
+                        <span class="tech-tag">
+                            <i class="fas fa-fan" style="color: #06b6d4;"></i> Refrigeración
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Trabajo Técnico 2 -->
+            <article class="project-card" data-category="repair">
+                <div class="project-image">
+                    <img src="src/img/20250214_124733.webp" alt="Diagnóstico y Reparación" loading="lazy">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Diagnóstico y Reparación</h3>
+                    <p class="project-description">
+                        Identificación y solución de fallas de hardware en computadoras de escritorio y notebooks.
+                        Reemplazo de componentes defectuosos.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">
+                            <i class="fas fa-microchip" style="color: #f59e0b;"></i> Componentes
+                        </span>
+                        <span class="tech-tag">
+                            <i class="fas fa-laptop-medical" style="color: #ef4444;"></i> Diagnóstico
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Trabajo Técnico 3 -->
+            <article class="project-card" data-category="repair">
+                <div class="project-image image-slider">
+                    <!-- Efecto simple al hacer hover (cambia opacidad entre 2 imágenes) -->
+                    <img src="src/img/20250307_184831.webp" alt="Actualización de Hardware - Inicial" loading="lazy"
+                        class="img-front">
+                    <img src="src/img/20250422_133054.webp" alt="Actualización de Hardware - Detalle" loading="lazy"
+                        class="img-back">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Actualización (Upgrades)</h3>
+                    <p class="project-description">
+                        Instalación de unidades de estado sólido (SSD), aumento de memoria RAM y reemplazo de
+                        componentes para maximizar el rendimiento.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">
+                            <i class="fas fa-hdd" style="color: #10b981;"></i> Almacenamiento
+                        </span>
+                        <span class="tech-tag">
+                            <i class="fas fa-memory" style="color: #8b5cf6;"></i> RAM
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Trabajo Técnico 4 -->
+            <article class="project-card" data-category="repair">
+                <div class="project-image gallery-trigger"
+                    data-gallery='["src/img/20250317_144554.webp", "src/img/20250317_161318.webp", "src/img/20250327_181402.webp", "src/img/20250327_185052.webp"]'>
+                    <img src="src/img/20250317_144554.webp" alt="Limpieza de hardware 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Ver Galería (4 Fotos)</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Limpieza de hardware</h3>
+                    <p class="project-description">
+                        Limpieza completa de componentes internos de una computadora.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">
+                            <i class="fas fa-desktop" style="color: #3b82f6;"></i> Ensamblaje
+                        </span>
+                        <span class="tech-tag">
+                            <i class="fas fa-gamepad" style="color: #ec4899;"></i> Gaming
+                        </span>
+                    </div>
+                </div>
+            </article>
+
             <!-- Placeholder para futuros proyectos -->
-            <div class="project-placeholder">
+            <div class="project-placeholder" data-category="web">
                 <div class="placeholder-icon">
                     <i class="fas fa-plus-circle"></i>
                 </div>
@@ -280,6 +405,17 @@
             © 2025 Guillermo Ramírez. Todos los derechos reservados.
         </p>
     </footer>
+
+    <!-- Lightbox Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+        <span class="gallery-close" id="galleryClose">&times;</span>
+        <button class="gallery-nav prev" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
+        <div class="gallery-content">
+            <img src="" alt="Gallery Image" class="gallery-img" id="galleryImage">
+        </div>
+        <button class="gallery-nav next" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="gallery-counter" id="galleryCounter">1 / 4</div>
+    </div>
 
     <script src="JavaScript/script-proyecto.js"></script>
 </body>

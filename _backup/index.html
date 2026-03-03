@@ -5,33 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Guillermo Ramírez - Desarrollador Frontend y Técnico en Reparación de PCs. Experiencias web modernas, mantenimiento y actualización de computadoras en Argentina.">
+        content="Guillermo Ramírez - Desarrollador Frontend especializado en crear experiencias web únicas y modernas.">
     <meta name="keywords"
-        content="desarrollador web, frontend, portfolio, Guillermo Ramirez, React, JavaScript, técnico en computadoras, reparación PC, mantenimiento hardware, Argentina">
+        content="desarrollador web, frontend, fullstack, portfolio, Guillermo Ramirez, React, JavaScript">
     <meta name="author" content="Guillermo Ramírez">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Guillermo Ramírez - Frontend & Hardware Support">
+    <meta property="og:title" content="Guillermo Ramírez - Frontend Developer">
     <meta property="og:description"
         content="Desarrollador Frontend especializado en crear experiencias web únicas y modernas.">
     <meta property="og:url" content="https://guillermodevportfolio.netlify.app/">
 
-    <title>Guillermo Ramírez | Portfolio Web & Técnico PC</title>
+    <title>Guillermo Ramírez | Frontend Developer</title>
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-
-    <!-- Fonts: Outfit (Headings) & Inter (Body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="preload" href="css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="css/index.css">
-    </noscript>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preload" href="css/index.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 
@@ -45,11 +37,13 @@
                 <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
                 <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" style="display:none;">
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
                 <i class="fas fa-moon"></i>
             </button>
             <button class="mobile-menu-btn" aria-label="Abrir menú">
-                <i class="fas fa-bars"></i>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </nav>
@@ -64,8 +58,7 @@
                 </div>
                 <h1 class="hero-title">Guillermo Ramírez</h1>
                 <p class="hero-subtitle">
-                    Desarrollador Frontend que transforma ideas en experiencias digitales excepcionales. Experiencia en
-                    hardware, mantenimiento y optimización de equipos.
+                    Desarrollador Frontend que transforma ideas en experiencias digitales excepcionales
                 </p>
                 <div class="cta-buttons">
                     <a href="contacto.html" class="btn btn-primary">
@@ -94,7 +87,7 @@
             <div class="hero-image">
                 <div class="profile-container">
                     <!-- Espacio para imagen de perfil -->
-                    <img src="assets/images/Foto Ghibli.png" class="profile-image" loading="lazy"
+                    <img src="assets/images/perfil-img.jpg" class="profile-image" loading="lazy"
                         alt="Guillermo Ramírez">
                     <div class="floating-elements">
                         <div class="floating-element">
@@ -131,71 +124,71 @@
                     </p>
                     <br>
                     <p class="about-text">
-                        Mi pasión por el desarrollo y las mejores prácticas me impulsa a
+                        Mi pasión por el código limpio y las mejores prácticas me impulsa a
                         entregar proyectos de alta calidad que superen las expectativas.
-                    </p>
-                    <br>
-                    <p class="about-text">
-                        Ademas de la programación, soy técnico de computadoras y se veran tambien algunos trabajos
-                        hechos en ese rubro.
                     </p>
                 </div>
                 <div class="skills-grid">
-                    <!-- Tarjeta de HTML -->
                     <div class="skill-card">
-                        <img src="assets/icons/html-5-svg.svg" alt="HTML5 Icon">
-                        <div class="skill-info">
-                            <span class="skill-name">HTML5</span>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill" style="--percent: 95%;"></div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="skill-name">HTML5</div>
+                            </div>
+                            <div class="card-back">
+                                <img src="assets/icons/html-5-svg.svg" alt="HTML5 Icon">
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tarjeta de CSS -->
                     <div class="skill-card">
-                        <img src="assets/icons/css-3-svg.svg" alt="CSS3 Icon">
-                        <div class="skill-info">
-                            <span class="skill-name">CSS3 & Diseño Sensible</span>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill" style="--percent: 90%;"></div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="skill-name">CSS3</div>
+                            </div>
+                            <div class="card-back">
+                                <img src="assets/icons/css-3-svg.svg" alt="CSS3 Icon">
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tarjeta de JS -->
                     <div class="skill-card">
-                        <img src="assets/icons/javascript-svg.svg" alt="JavaScript Icon">
-                        <div class="skill-info">
-                            <span class="skill-name">JavaScript (ES6+)</span>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill" style="--percent: 85%;"></div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="skill-name">JavaScript</div>
+                            </div>
+                            <div class="card-back">
+                                <img src="assets/icons/javascript-svg.svg" alt="JavaScript Icon">
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tarjeta de React -->
                     <div class="skill-card">
-                        <img src="assets/icons/react-javascript-js.svg" alt="React Icon">
-                        <div class="skill-info">
-                            <span class="skill-name">React UI</span>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill" style="--percent: 75%;"></div>
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="skill-name">React</div>
+                            </div>
+                            <div class="card-back">
+                                <img src="assets/icons/react-javascript-js.svg" alt="React Icon">
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tarjeta de Hardware PC (Extra por su rol de técnico) -->
-                    <div class="skill-card">
-                        <i class="fas fa-microchip"
-                            style="font-size: 42px; color: var(--text-secondary); filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5)); transition: var(--transition-normal);"></i>
-                        <div class="skill-info">
-                            <span class="skill-name">Hardware & Mantenimiento PC</span>
-                            <div class="skill-bar-bg">
-                                <div class="skill-bar-fill" style="--percent: 100%;"></div>
+                    <!--    <div class="skill-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="skill-name">Node.js</div>
+                            </div>
+                            <div class="card-back">
+                                <img src="assets/icons/nodejs.svg" alt="Node.js Icon">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                    <!--  <div class="skill-card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="skill-name">Git</div>
+                            </div>
+                            <div class="card-back">
+                                <img src="assets/icons/git.svg" alt="Git Icon">
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -1,15 +1,12 @@
+# Robots.txt - Portfolio de Guillermo Ramírez
+
+# Permitir a todos los robots rastrear el sitio
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://guillermodevportfolio.netlify.app/
-
-# Allow all files
-Allow: /*.html
-Allow: /*.css
-Allow: /*.js
-Allow: /assets/
-
-# Disallow admin or private areas (if any)
+# Excluir carpetas internas (no aportan valor SEO)
 Disallow: /admin/
 Disallow: /private/
+
+# Referencia al Sitemap (esencial para Google Search Console)
+Sitemap: https://guillermodevportfolio.netlify.app/sitemap.xml
