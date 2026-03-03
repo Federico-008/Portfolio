@@ -1,4 +1,19 @@
 /* Ultra Premium Dark Theme - Codebyjean Inspired */
+
+/* ===== PERFORMANCE OVERRIDES ===== */
+/* Font Awesome: override font-display para que los iconos no bloqueen el render */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-display: swap;
+    src: local('Font Awesome 6 Free');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-display: swap;
+    src: local('Font Awesome 6 Brands');
+}
+
 :root {
     /* Primary Colors - Electric Indigo & Cyan */
     --primary-color: #6366f1;
@@ -371,6 +386,7 @@ section {
 
 .btn-primary:hover {
     transform: translateY(-4px);
+    /* box-shadow no es compositado, pero es aceptable en hover puntual */
     box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
 }
 
@@ -379,6 +395,8 @@ section {
     border: 1px solid var(--border-light);
     color: var(--text-primary);
     backdrop-filter: blur(10px);
+    /* Solo transicionamos transform para evitar animaciones no compositadas */
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
 }
 
 .btn-secondary:hover {
@@ -564,14 +582,17 @@ section {
 .skill-card i {
     width: 42px;
     height: 42px;
+    /* Drop-shadow fijo, sin transicion para evitar repaint en cada frame */
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
-    transition: var(--transition-normal);
+    /* Solo transform es GPU-compositado - no transicionar filter/color */
+    transition: transform var(--transition-normal);
+    will-change: transform;
 }
 
 .skill-card:hover img,
 .skill-card:hover i {
     transform: scale(1.15);
-    filter: drop-shadow(0 6px 15px rgba(255, 255, 255, 0.2));
+    /* Quitamos el cambio de filter en hover para evitar non-composited animation */
 }
 
 .skill-info {
@@ -648,8 +669,10 @@ section {
     justify-content: center;
     font-size: 1.4rem;
     color: var(--text-secondary);
-    transition: var(--transition-normal);
+    /* Solo transform y opacity son GPU-compositados */
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
     backdrop-filter: blur(10px);
+    will-change: transform;
 }
 
 .social-link:hover {
@@ -673,6 +696,15 @@ section {
         transform: scale(2);
         opacity: 0;
     }
+}
+
+/* will-change en elementos con animacion continua - los promueve a capas GPU separadas */
+.profile-container {
+    will-change: transform;
+}
+
+.floating-element {
+    will-change: transform;
 }
 
 @keyframes levitate {
