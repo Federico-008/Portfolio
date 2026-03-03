@@ -20,14 +20,26 @@
     <title>Guillermo Ramírez | Portfolio Web & Técnico PC</title>
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
-    <!-- Fonts: Outfit (Headings) & Inter (Body) -->
+    <!-- Fonts: Outfit (Headings) & Inter (Body) con font-display=swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Carga no bloqueante de Google Fonts: swap evita FOIT y mejora FCP -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+            rel="stylesheet">
+    </noscript>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome: carga diferida para no bloquear el LCP -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    </noscript>
+
     <link rel="preload" href="css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="css/index.css">
@@ -93,9 +105,9 @@
             </div>
             <div class="hero-image">
                 <div class="profile-container">
-                    <!-- Espacio para imagen de perfil -->
-                    <img src="assets/images/Foto Ghibli.png" class="profile-image" loading="lazy"
-                        alt="Guillermo Ramírez">
+                    <!-- Imagen LCP: webp, sin lazy loading, con alta prioridad de fetch -->
+                    <img src="assets/images/Foto Ghibli.webp" class="profile-image" fetchpriority="high"
+                        decoding="async" width="420" height="420" alt="Guillermo Ramírez">
                     <div class="floating-elements">
                         <div class="floating-element">
                             <i class="fab fa-react" style="color: #61dafb;"></i>
@@ -143,7 +155,7 @@
                 <div class="skills-grid">
                     <!-- Tarjeta de HTML -->
                     <div class="skill-card">
-                        <img src="assets/icons/html-5-svg.svg" alt="HTML5 Icon">
+                        <img src="assets/icons/html-5-svg.svg" alt="HTML5 Icon" width="42" height="42" loading="lazy">
                         <div class="skill-info">
                             <span class="skill-name">HTML5</span>
                             <div class="skill-bar-bg">
@@ -154,7 +166,7 @@
 
                     <!-- Tarjeta de CSS -->
                     <div class="skill-card">
-                        <img src="assets/icons/css-3-svg.svg" alt="CSS3 Icon">
+                        <img src="assets/icons/css-3-svg.svg" alt="CSS3 Icon" width="42" height="42" loading="lazy">
                         <div class="skill-info">
                             <span class="skill-name">CSS3 & Diseño Sensible</span>
                             <div class="skill-bar-bg">
@@ -165,7 +177,8 @@
 
                     <!-- Tarjeta de JS -->
                     <div class="skill-card">
-                        <img src="assets/icons/javascript-svg.svg" alt="JavaScript Icon">
+                        <img src="assets/icons/javascript-svg.svg" alt="JavaScript Icon" width="42" height="42"
+                            loading="lazy">
                         <div class="skill-info">
                             <span class="skill-name">JavaScript (ES6+)</span>
                             <div class="skill-bar-bg">
@@ -176,7 +189,8 @@
 
                     <!-- Tarjeta de React -->
                     <div class="skill-card">
-                        <img src="assets/icons/react-javascript-js.svg" alt="React Icon">
+                        <img src="assets/icons/react-javascript-js.svg" alt="React Icon" width="42" height="42"
+                            loading="lazy">
                         <div class="skill-info">
                             <span class="skill-name">React UI</span>
                             <div class="skill-bar-bg">
@@ -239,7 +253,7 @@
             © 2025 Guillermo Ramírez. Todos los derechos reservados.
         </p>
     </footer>
-    <script src="JavaScript/script.js"></script>
+    <script src="JavaScript/script.js" defer></script>
 
 </body>
 
