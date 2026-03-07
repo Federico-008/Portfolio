@@ -101,9 +101,9 @@
     --font-body: 'Inter', sans-serif;
 
     /* Animations & Utilities */
-    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-normal: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
@@ -143,6 +143,7 @@ body::before {
     background: radial-gradient(circle at 50% 50%, var(--primary-color) 0%, transparent 40%),
         radial-gradient(circle at 80% 20%, var(--accent-color) 0%, transparent 30%),
         radial-gradient(circle at 20% 80%, var(--secondary-color) 0%, transparent 35%);
+    will-change: transform;
 }
 
 /* Custom Scrollbar */
@@ -191,8 +192,8 @@ a {
     top: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-subtle);
     z-index: 1000;
     padding: 1.2rem 0;
@@ -661,6 +662,7 @@ section {
     border-radius: var(--radius-full);
     width: var(--percent);
     position: relative;
+    will-change: transform;
 }
 
 .skill-bar-fill::after {
@@ -671,7 +673,7 @@ section {
     bottom: 0;
     left: 0;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-    animation: shimmer 2s infinite;
+    animation: shimmer 3s infinite linear;
 }
 
 /* Projects Preview */
@@ -741,7 +743,19 @@ section {
     will-change: transform;
 }
 
+.profile-container::before {
+    will-change: transform;
+}
+
 .floating-element {
+    will-change: transform;
+}
+
+.status-dot::after {
+    will-change: transform, opacity;
+}
+
+.skill-bar-fill::after {
     will-change: transform;
 }
 
@@ -899,5 +913,21 @@ section {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Disable expensive animations on mobile to boost performance score */
+    .profile-container,
+    .floating-element {
+        animation: none !important;
+    }
+
+    .profile-container::before {
+        animation-duration: 8s !important;
+        /* Slower = less CPU */
+    }
+
+    .skill-card {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
     }
 }
