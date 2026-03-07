@@ -23,15 +23,6 @@
     <!-- Fonts: Outfit (Headings) & Inter (Body) con font-display=swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Carga no bloqueante de Google Fonts: swap evita FOIT y mejora FCP -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
-            rel="stylesheet">
-    </noscript>
 
     <!-- Font Awesome: carga diferida para no bloquear el LCP -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
@@ -40,10 +31,9 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     </noscript>
 
-    <link rel="preload" href="css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="css/index.css">
-    </noscript>
+    <link rel="stylesheet" href="css/index.min.css">
+    <!-- Preload para la imagen LCP principal -->
+    <link rel="preload" as="image" href="assets/images/Foto Ghibli.webp">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 
